@@ -1,0 +1,25 @@
+.container-info {
+    position: relative;
+}
+
+.container-info-title {
+position: absolute;
+top: 20px;
+left: 765px;
+background: linear-gradient(to right, rgba(72, 150, 239, 0.2) 0%,  rgba(247, 37, 132, 0.2) 100%);
+padding: 20px;
+}
+
+.container-info-block {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.right {
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    gap: 30px;
+}

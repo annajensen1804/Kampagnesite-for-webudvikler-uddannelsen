@@ -1,10 +1,13 @@
-@import url("./base.css");
-@import url("./header.css");
-@import url("./hero.css");
-@import url("./collage.css");
-@import url("./apply.css");
-@import url("./runRow.css");
-@import url("./info.css");
-@import url("./aiSection.css");
-@import url("./teaser.css");
-@import url("./footer.css");
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght,ELSH@100..900,2&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@import url(./base.css);
+@import url(./header.css);
+@import url(./hero.css);
+@import url(./collage.css);
+@import url(./applay.css);
+@import url(./runRow.css);
+@import url(./info.css);
+@import url(./aiSection.css);
+@import url(./teaser.css);
+@import url(./footer.css);

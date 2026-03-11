@@ -1,6 +1,5 @@
 .hero__container {
-    width: 100%vw
-
+    width: 100px;
 }
 
 .hero__img {
@@ -8,5 +7,5 @@
 }
 
 .hero__h1 {
-    background: red;
+font-family: ;
 }

@@ -1,5 +1,12 @@
 .hero__container {
-    width: 100%;
+    width: 100%vw
 
 }
 
+.hero__img {
+    width: 100vw;
+}
+
+.hero__h1 {
+    background: red;
+}

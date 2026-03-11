@@ -1,0 +1,7 @@
+.container-info {
+    display: block;
+}
+
+.container-info-block {
+    display: flex;
+}

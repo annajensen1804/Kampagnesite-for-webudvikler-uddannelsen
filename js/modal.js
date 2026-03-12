@@ -17,15 +17,33 @@ export const initModal = () => {
   };
 
   const runCode = () => {
-    const lines = refs.textarea.value.split("\n");
-    let formattedCode = "";
+    let code = refs.textarea.value.trim();
 
-    lines.forEach((line) => {
-      const trimmed = line.trim();
-      formattedCode += trimmed ? trimmed + "\n" : "\n";
-    });
+    // ✅ АВТОДОБАВЛЕННЯ <> для звичайного тексту
+    if (!code.includes("<")) {
+      // Якщо немає тегів – обгортаємо кожен рядок
+      const lines = code.split("\n");
+      let htmlLines = "";
 
-    refs.codeEx.textContent = formattedCode.trim();
+      lines.forEach((line) => {
+        const trimmed = line.trim();
+        if (trimmed) {
+          htmlLines += `<h1>${trimmed}</h1>\n`;
+        } else {
+          htmlLines += "\n";
+        }
+      });
+      code = htmlLines.trim();
+    }
+
+    // ✅ HTML escape для відображення тегів як тексту
+    const escapedHtml = code
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;");
+
+    refs.codeEx.innerHTML = escapedHtml; // ✅ innerHTML для HTML!
+
     refs.textarea.style.background = "#00ff5f20";
     setTimeout(() => {
       refs.textarea.style.background = "#1a1a1a";

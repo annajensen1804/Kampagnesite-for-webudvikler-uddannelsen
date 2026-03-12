@@ -12,3 +12,27 @@ img {
   width: 100%;
   height: auto;
 }
+
+h2 {
+  font-weight: 400;
+  font-size: 38px;
+  color: #fff;
+  line-height: 1.4;
+  letter-spacing: 1px;
+  text-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+h3 {
+    color: #B5179E;
+    padding: 15px 0 5px 0;
+}
+
+p {
+    color: #1C0453;
+}
+
+@media (max-width: 375px) {
+  .colagge-text h2 {
+    font-size: 20px;
+  }
+}

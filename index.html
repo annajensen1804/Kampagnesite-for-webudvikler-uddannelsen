@@ -30,23 +30,25 @@
       </div>
     </section>
     <section class="container-try">
-  <div class="container-try-block">
 
-    <div>
-      <h2 class="try-text">
-        Du bruger internettet hverdag - 
-        hvorfor ikke bygge det?
-      </h2>
+      <div class="container-try-block">
 
-      <button class="try-btn">
-        PRØV DET NU
-      </button>
-    </div>
+       <div>
+         <h2 class="try-text">
+           Du bruger internettet hverdag - hvorfor ikke bygge det?
+         </h2>
 
-    <div class="try-foto"></div>
+         <button class="try-btn" id="openModal">
+           PRØV DET NU
+         </button>
+        </div>
 
-  </div>
-</section>
+       <div class="try-foto"></div>
+
+      </div>
+
+    </section>
+      
     <section class="teaser"></section>
     <section class="run-row"></section>
     <section class="container-info">
@@ -76,7 +78,14 @@
         </div>
         </div>
     </section>
-    <section></section>
+    <section class="container-apply">
+      <div class="container-apply-block">
+        <img class="apply-img-1" src="images/programming-background.jpg" alt="">
+        <p class="apply-text-1">ANSØG NU</p>
+        <p class="apply-text-2">LÆS MERE</p>
+        <img class="apply-img-2" src="images/html-css-collage.jpg" alt="">
+      </div>
+    </section>
 
 
     <footer class="footer-page"> 
@@ -104,8 +113,36 @@
           </ul>
         </div>
       </div>
+    </footer>
+     
 
-
+     <!-- MODAL -->
+    <div class="modal" id="modal">
+      <div class="modal__overlay" id="closeModal"></div>
+    
+      <div class="modal__panel">
+       
+        
+        <div class="modal__content">
+          <button class="modal__close" id="closeModalBtn">Luk</button>
+          <h4 class="modal__title">Prøv det nu!</h4>
+          <p class="modal__subtitle">
+            Skriv din første kodelinje – "Jeg kan kode"
+          </p>
+    
+          <div class="modal__code-example">
+            &lt;h1&gt;Hello world!&lt;/h1&gt;
+          </div>
+    
+          <textarea
+            class="modal__textarea"
+            placeholder="Hello world!"
+          ></textarea>
+    
+          <button class="modal__cta">Kør!</button>
+        </div>
+      </div>
+    </div>
 
     
     

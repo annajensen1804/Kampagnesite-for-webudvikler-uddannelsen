@@ -13,6 +13,8 @@
 .footer-container{
     margin: 10px;
     display: flex;
+    justify-content: space-around
+    
 }
 
 
@@ -55,11 +57,22 @@ a,li{
   color: #000000;
   margin-bottom: 15px;
 }
+
 .social-list{
-    display: flex;
     gap: 16px;
+
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    
 }
+
 .social_media{
     padding-top: 40px;
     padding-right: 40px;
+
+
+    
+    
+    
 }

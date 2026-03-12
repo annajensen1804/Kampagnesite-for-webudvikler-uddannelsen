@@ -1,16 +1,15 @@
-/* контейнер */
-
 .container-try-block {
   width: 100%;
   height: 90vh;
+
   display: grid;
   grid-template-columns: 1fr 1.3fr;
+
   align-items: center;
   position: relative;
+
   padding-top: 80px;
 }
-
-/* ліва частина */
 
 .try-text {
   font-family: "Inter", sans-serif;
@@ -20,8 +19,8 @@
   color: white;
 
   position: absolute;
-  top: 120px;
-  left: 60px;
+
+  top: 160px;
 
   padding: 20px 25px;
 
@@ -32,12 +31,14 @@
   );
 
   width: 150%;
-  margin-bottom: 50px;
 }
 
-/* кнопка */
-
 .try-btn {
+  position: absolute;
+
+  /* top: 280px; */
+  left: 20%;
+
   padding: 22px 40px;
 
   font-family: "Inter", sans-serif;
@@ -49,11 +50,7 @@
   background: rgba(255, 255, 255, 0.2);
   border: none;
   cursor: pointer;
-
-  margin-left: 140px;
 }
-
-/* фото */
 
 .try-foto {
   height: 700px;
@@ -65,77 +62,56 @@
       rgba(247, 37, 133, 0.2) 100%
     ),
     url("../images/foto.jpg") center/cover no-repeat;
-
-  position: relative;
 }
-
-/* overlay під текстом */
-
-.try-text::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-}
-
-/* ---------------------- */
-/* 📱 Tablet 768px */
-/* ---------------------- */
-
+/* ===== Планшет ===== */
 @media (max-width: 768px) {
   .container-try-block {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .try-foto {
-    height: 340px;
+    grid-template-columns: 1fr;
+    height: auto;
+    padding-top: 60px;
   }
 
   .try-text {
-    font-size: 24px;
-    width: 130%;
-
-    top: -30px;
-    left: 8px;
-
-    padding: 16px 20px;
+    font-size: 22px;
+    width: 100%;
+    top: 120px;
+    padding: 15px 20px;
   }
 
   .try-btn {
-    font-size: 22px;
-    padding: 18px 30px;
+    font-size: 20px;
+    padding: 18px 35px;
+    left: 10%;
+    top: 250px;
+  }
 
-    margin-left: 80px;
+  .try-foto {
+    height: 400px;
+    background-size: cover;
   }
 }
 
-/* ---------------------- */
-/* 📱 Mobile 375px */
-/* ---------------------- */
-
+/* ===== Мобільний ===== */
 @media (max-width: 375px) {
   .container-try-block {
-    grid-template-columns: 1fr;
-  }
-
-  .try-foto {
-    height: 280px;
+    padding-top: 40px;
   }
 
   .try-text {
-    font-size: 20px;
-    width: 110%;
-
-    top: -20px;
-    left: 5px;
-
-    padding: 14px 16px;
+    font-size: 16px;
+    top: 80px;
+    padding: 10px 12px;
   }
 
   .try-btn {
-    font-size: 18px;
-    padding: 14px 22px;
+    font-size: 16px;
+    padding: 12px 25px;
+    left: 5%;
+    top: 160px;
+  }
 
-    margin-left: 40px;
+  .try-foto {
+    height: 300px;
+    background-size: cover;
   }
 }

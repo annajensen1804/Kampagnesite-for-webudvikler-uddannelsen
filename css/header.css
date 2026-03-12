@@ -11,7 +11,7 @@ header {
 
 /* indre container - styrer max-bredde og padding*/
 .header__inner {
-  max-width: 1460px;
+ width: 100%;
   padding: 0 20px;
   margin: 0 auto;
   height: 80px;

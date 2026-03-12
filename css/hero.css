@@ -1,14 +1,16 @@
 .hero__container {
-  width: 100vw;
+  width: 100%;
   display: grid;
   grid-template-columns:;
   position: relative;
+  overflow: hidden;
 
 }
 
 .hero__img {
-  width: 100vw;
-  overflow: hidden;
+  width: 100%;
+  max-width: 100%;
+  display: block;
 }
 
 .hero__h1 {
@@ -113,13 +115,19 @@
 
 .hero__a {
   top: 40px;
-  left: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
   z-index: 300;
 }
 .hero__b {
 
   top: 45px;
-  left: 54px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
   z-index: 299;
 }
 

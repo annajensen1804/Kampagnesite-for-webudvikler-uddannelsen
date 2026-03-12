@@ -31,8 +31,8 @@ p {
     color: #1C0453;
 }
 
-@media (max-width: 375px) {
-  .colagge-text h2 {
+@media (max-width: 768px) {
+  h2 {
     font-size: 20px;
   }
 }

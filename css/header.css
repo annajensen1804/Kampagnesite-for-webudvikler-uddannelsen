@@ -12,13 +12,18 @@ header {
 /* indre container - styrer max-bredde og padding*/
 .header__inner {
   max-width: 1460px;
-  padding: 0 40px;
+  padding: 0 20px;
   margin: 0 auto;
-  height: 63px;
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 
+}
+
+.nav__img {
+    width: 120px;
+    place-items: center;
 }
 
 /* BURGER vises som default */
@@ -39,7 +44,7 @@ visibility: hidden;
 .mobile__menu__icon .bar {
   width: 100%;
   height: 3px;
-  background: #491409;
+  background: #4CC9F0;
   transition: 0.3s;
   z-index: 305;
 }
@@ -52,20 +57,25 @@ visibility: hidden;
   top: 0;
   width: 100%;
   height: 100%;
-  background-color:  rgba(232, 237, 233, 0.99);
+   background: linear-gradient(
+    160deg,
+    hsla(212, 84%, 61%, 0.999),
+    hsla(333, 93%, 56%, 0.99)
+  );
   display: none;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 30px;
   /* mellemrum */
   transform: translateX(100);
   transition: transform 0.3s ease-in-out;
+  
 }
 
 .nav__item {
-  color:   #491409;
-  font-family: "Bad Script";
+  color:   #fff;
+ 
   text-decoration: none;
   font-size: 24px;
 
@@ -110,11 +120,10 @@ visibility: hidden;
     transform: none;
   }
 
-  .nav__item {
-   font-size: 12px;
-  }
+ 
   header {
-     background: #D9D9D9;
+  
+     background: linear-gradient(160deg, #B5179E 9%,  #4CC9F0 95%);
   }
 
   .hidden__mobil {
@@ -122,7 +131,5 @@ visibility: visible;
 font-size: 1.3rem;
 }
 
-.hidden__pc {
-  visibility: hidden;
-}
+
 }

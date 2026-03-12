@@ -10,7 +10,7 @@ export const header = () => {
        <header class="container__header">
             
       <div class="header__inner">
-        <a class="nav__item hidden__mobil" href="index.html"></a>
+        <a class="nav__item hidden__mobil" href="https://mediacollege.dk/" target="_blank"> <img class="nav__img" src="../images/logo-media-college-denmark-color.svg" alt="Nav_logo"></a>
 
         <div class="mobile__menu__icon" id="burger__menu">
           <div class="bar"></div>
@@ -19,9 +19,9 @@ export const header = () => {
         </div>
 
         <nav class="nav__links" id="nav__links">
-          <a class="nav__item" href="markeder.html">Grundforløb 1</a>
-          <a class="nav__item" href="kort.html">Webudvikler</a>
-          <a class="nav__item" href="favoritter.html">Ansøg nu</a>
+          <a class="nav__item" href="https://mediacollege.dk/#grundforloeb" target="_blank">Grundforløb 1</a>
+          <a class="nav__item" href="https://mediacollege.dk/#web" target="_blank">Webudvikler</a>
+          <a class="nav__item" href="https://mediacollege.dk/#ansoeg" target="_blank">Ansøg nu</a>
         </nav>
       </div>
     </header>

@@ -19,6 +19,13 @@
 
 
 
+.info-text {
+  font-size: 14px;
+  line-height: 1.4;
+  color: #000000;
+  white-space: normal;
+  line-height: 1.4;
+}
 
 .ul-list{
     list-style: none;

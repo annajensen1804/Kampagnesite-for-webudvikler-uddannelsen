@@ -1,23 +1,34 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.footer-page {
+  background-color: #4895ef;
+  width: 100%;
 }
 
-
-.footer-page{
-    background-color: #4895EF;
-    height: 150px;
-    width: 100%;
-}
-.footer-container{
-    margin: 10px;
-    display: flex;
-    justify-content: space-around
-    
+.footer-container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+  text-align: center;
 }
 
+.logo-svg {
+  width: 180px;
+  height: auto;
+  max-width: 100%;
+}
 
+.info {
+  padding: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  text-align: center;
+}
 
 .info-text {
   font-size: 14px;
@@ -27,59 +38,74 @@
   line-height: 1.4;
 }
 
-.ul-list{
-    list-style: none;
-
-    display: flex;
-    justify-content: center;
-   
-
-    font-size: 10px;
-}
-a,li{
-    list-style: none;
-}
-.logo-svg{
-    width: 344px;
-    height: 98px;
-
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding-top: 40px;
-
+.social_media {
+  padding: 0;
 }
 
-.info{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 40px;
-
-}
-.social-text{
+.social-text {
   font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
+  font-size: 14px;
   color: #000000;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
 
-.social-list{
-    gap: 16px;
-
-    display: flex;
-    justify-content: end;
-    align-items: end;
-    
+.social-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  list-style: none;
 }
 
-.social_media{
-    padding-top: 40px;
-    padding-right: 40px;
+.social-icons-footer {
+  width: 24px;
+  height: 24px;
+  fill: #fff;
+}
 
+@media (min-width: 768px) {
+  .footer-container {
+    padding: 32px 40px;
+    gap: 48px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-    
-    
-    
+  .logo-svg {
+    width: 240px;
+  }
+
+  .info-text {
+    font-size: 16px;
+  }
+
+  .social-text {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+
+  .social-list {
+    gap: 20px;
+  }
+
+  .social-icons-footer {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer-container {
+    padding: 40px 80px;
+    gap: 60px;
+  }
+
+  .logo-svg {
+    width: 300px;
+  }
+
+  .social-list {
+    gap: 24px;
+  }
 }

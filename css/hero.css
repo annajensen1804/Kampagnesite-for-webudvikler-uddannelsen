@@ -1,7 +1,7 @@
 .hero__container {
   width: 100%;
-  display: grid;
-  grid-template-columns:;
+  /* display: grid;
+  grid-template-columns:; */
   position: relative;
   overflow: hidden;
 

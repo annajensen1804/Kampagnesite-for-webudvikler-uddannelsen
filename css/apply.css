@@ -5,6 +5,7 @@
 .container-apply-block {
     width: 100%;
     display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: 
     "a b b"
     "c c d";
@@ -12,25 +13,54 @@
 
 .apply-img-1 {
     grid-area: a;
-    width: 500px;
-    height: auto;
+    width: 100%;
+    height: clamp(150px, 30vw, 375px); 
+    object-fit: cover;
 }
 
-.apply-text-1 {grid-area: b;}
-.apply-text-2 {grid-area: c;}
+.apply-text-wrapp-1 {
+    grid-area: b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: clamp(150px, 30vw, 375px);
+    background: linear-gradient(to right, rgba(181, 23, 157, 0.25) 0%, rgba(79, 10, 69, 0.25) 100%);
+    cursor: pointer;
+}
+
+.apply-text-wrapp-1:hover {
+background: linear-gradient(to right, rgba(181, 23, 157, 0.5) 0%, rgba(79, 10, 69, 0.5) 100%)
+}
+
+.apply-text-wrapp-2 {
+    grid-area: c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: clamp(160px, 32vw, 400px);
+    background: linear-gradient(to right, rgba(181, 23, 157, 0.25) 0%, rgba(79, 10, 69, 0.25) 100%);
+    cursor: pointer
+}
+
+.apply-text-wrapp-2:hover {
+background: linear-gradient(to right, rgba(181, 23, 157, 0.5) 0%, rgba(79, 10, 69, 0.5) 100%)
+}
 
 .apply-text-1, .apply-text-2 {
     font-family: handjet;
     font-weight: 200;
-    font-size: 150px;
+    font-size: clamp(40px, 12vw, 150px);
     color: #4cc9f0;
     -webkit-text-stroke: 2px #3a0ca3;
-    text-shadow:  #B5179E;
-    background: #B5179E;
+    text-shadow: 0 0 10px #B5179E;
+    text-align: center;
 }
 
 .apply-img-2 {
     grid-area: d;
-    width: 600px;
-    height: auto;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }

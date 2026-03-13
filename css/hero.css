@@ -108,10 +108,7 @@
 }  
 }
 @media (max-width: 600px) {
-.hero__h1 {
 
-  font-size: 60px;
-}
 
 .hero__a {
   top: 40px;
@@ -133,11 +130,11 @@
 
 .hero__colorOverlay {
 
-  width: 78vw;
+  width: 80vw;
   height: 30vw;
     position: absolute;
   top: 30px;
- right: 0;
+ right: 8px;
  z-index: 200;
 }  
 }

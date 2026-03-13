@@ -17,12 +17,12 @@
 
 .container-info-title-comp {
     font-size: 28px;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .container-info-title-mobile {
     font-size: 26px;
-    font-weight: 500;
+    font-weight: 600;
     letter-spacing: 1.5px;
     position: absolute;
     top: 10%;

@@ -4,6 +4,4 @@ import { initModal } from "./modal.js";
 
 header();
 initModal();
-
-header();
 initRunRow();

@@ -6,7 +6,7 @@
   display: flex;
   align-items: center;
   height: 100px;
-  margin: 0;
+  margin: 20px 0 20px 0;
 
   overflow: hidden;
   text-transform: uppercase;
@@ -51,4 +51,22 @@
   to {
     transform: translateX(-50%);
   }
+}
+
+.run-row_mobil {
+  visibility: hidden;
+  margin: 0;
+}
+
+@media (max-width: 800px) {
+.run-row_mobil {
+  visibility: visible;
+  margin: 0;
+}
+
+
+.run-row_pc {
+  visibility: hidden;
+  margin: 0;
+}
 }

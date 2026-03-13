@@ -1,0 +1,38 @@
+.AI-container{
+   background: linear-gradient(
+    270deg,
+    hsla(258, 86%, 34%, 0.26),
+    hsla(259, 88%, 13%, 0.26)
+  );
+height: auto;
+display: flex;
+flex-direction: ;}
+.AI_img-Main{
+
+width: 606px;
+/* display: flex;
+justify-content: center;
+align-items: end; */
+background-color: #16043D;
+/* position: absolute; */
+grid-area: b;
+}
+.AI_text{
+grid-area: a;
+}
+ 
+ 
+.AI_textogh1{
+color: white;
+width: 460px;
+display: flex;
+justify-content: center;
+position: relative;
+flex-direction: column;
+margin: 150px;
+gap: 20px;
+}
+ 
+.AI_text{
+color: #1C0453;
+}

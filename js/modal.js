@@ -19,9 +19,7 @@ export const initModal = () => {
   const runCode = () => {
     let code = refs.textarea.value.trim();
 
-    // ✅ АВТОДОБАВЛЕННЯ <> для звичайного тексту
     if (!code.includes("<")) {
-      // Якщо немає тегів – обгортаємо кожен рядок
       const lines = code.split("\n");
       let htmlLines = "";
 
@@ -36,13 +34,12 @@ export const initModal = () => {
       code = htmlLines.trim();
     }
 
-    // ✅ HTML escape для відображення тегів як тексту
     const escapedHtml = code
       .replace(/&/g, "&amp;")
       .replace(/</g, "&lt;")
       .replace(/>/g, "&gt;");
 
-    refs.codeEx.innerHTML = escapedHtml; // ✅ innerHTML для HTML!
+    refs.codeEx.innerHTML = escapedHtml;
 
     refs.textarea.style.background = "#00ff5f20";
     setTimeout(() => {
@@ -50,7 +47,6 @@ export const initModal = () => {
     }, 300);
   };
 
-  // EVENTS
   refs.openBtn?.addEventListener("click", toggleModal);
   refs.closeOverlay?.addEventListener("click", toggleModal);
   refs.closeBtn?.addEventListener("click", toggleModal);

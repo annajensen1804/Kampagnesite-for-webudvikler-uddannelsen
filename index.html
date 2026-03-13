@@ -162,32 +162,38 @@ Webudviklere bruger allerede AI som et effektivt hjælpemiddel til at spare tid 
      
 
      <!-- MODAL -->
-    <div class="modal" id="modal">
-      <div class="modal__overlay" id="closeModal"></div>
-    
-      <div class="modal__panel">
+   
        
         
-        <div class="modal__content">
-          <button class="modal__close" id="closeModalBtn">Luk</button>
-          <h4 class="modal__title">Prøv det nu!</h4>
-          <p class="modal__subtitle">
-            Skriv din første kodelinje – "Jeg kan kode"
-          </p>
-    
-          
-          <textarea
-          class="modal__textarea"
-          placeholder="Hello world!"
-          ></textarea>
-          <div class="modal__code-example">
-            &lt;h1&gt;Hello world!&lt;/h1&gt;
-          </div>
-    
-          <button class="modal__cta">Kør!</button>
-        </div>
+       <div class="modal" id="modal">
+  <div class="modal__overlay" id="closeModal"></div>
+  
+  <div class="modal__panel">
+    <div class="modal__content">
+      <!-- КНОПКА НЕ ЗМІНЮЄТЬСЯ ✅ -->
+      <button class="modal__close" id="closeModalBtn">Luk</button>
+      
+      <h4 class="modal__title">Prøv det nu!</h4>
+      <p class="modal__subtitle">
+        Skriv din første kodelinje – "Jeg kan kode"
+      </p>
+      
+      <!-- ✅ LIVE ПРЕДВАГАЧЕННЯ ТЕКСТУ З TEXTAREA -->
+      <div class="modal__code-example" id="codePreview">
+        Hello world!
       </div>
+      
+      <textarea
+        class="modal__textarea"
+        placeholder="Skriv din kode her..."
+        id="codeInput"
+      ></textarea>
+      
+      <button class="modal__cta">Kør!</button>
     </div>
+  </div>
+
+
 
     
     

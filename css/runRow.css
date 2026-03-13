@@ -1,0 +1,54 @@
+.run-row {
+  background: linear-gradient(
+    hsla(258, 86%, 34%, 0.26),
+    hsla(259, 88%, 13%, 0.26)
+  );
+  display: flex;
+  align-items: center;
+  height: 100px;
+  margin: 0;
+
+  overflow: hidden;
+  text-transform: uppercase;
+}
+
+.glide-wrapper {
+  display: flex;
+  width: 100%;
+}
+
+.glide-track {
+  display: flex;
+  width: max-content;
+  flex-shrink: 0;
+  will-change: transform;
+  animation: glide 20s linear infinite;
+}
+
+.glide-item {
+  white-space: nowrap;
+  font-size: 80px;
+  font-family: "handjet", serif;
+  font-weight: 200;
+  color: white;
+  padding: 20px;
+  flex-shrink: 0;
+}
+.run-row__nu {
+  font-weight: 500;
+}
+
+.run-row_link {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+}
+
+@keyframes glide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}

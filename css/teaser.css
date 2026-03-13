@@ -1,146 +1,20 @@
-/* Оверлей лишаємо майже без змін */
 .modal {
   position: fixed;
   inset: 0;
   display: none;
-  z-index: 1000;
-
-  /* центруємо вміст за допомогою flex */
-  display: none; /* приховано */
   justify-content: center;
   align-items: center;
+  z-index: 1000;
 }
 
 .modal--open {
-  display: flex; /* показуємо як flex-контейнер */
+  display: flex;
 }
 
 .modal__overlay {
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.6);
-}
-
-/* ТЕПЕР ПАНЕЛЬ – ЦЕНТРАЛЬНЕ ВІКНО, НЕ ПРАВА КОЛОНКА */
-.modal__panel {
-  position: relative; /* більше не fixed/absolute */
-  width: min(400px, 90vw);
-  max-height: 80vh;
-  background: linear-gradient(180deg, #3a7bd5 0%, #ff00a8 100%);
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  padding: 16px;
-  border-radius: 8px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-  overflow: hidden;
-}
-
-/* решта стилів можна залишити як були */
-.modal__header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 12px;
-}
-
-.modal__header h3 {
-  font-size: 14px;
-  background: #444;
-  padding: 4px 10px;
-  border-radius: 999px;
-}
-
-.modal__close {
-  border: none;
-  background: transparent;
-  color: #fff;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-.modal__content {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  font-size: 14px;
-}
-
-.modal__title {
-  font-size: 18px;
-}
-
-.modal__subtitle {
-  font-size: 13px;
-}
-
-.modal__code-example {
-  background: #000;
-  color: #00ff5f;
-  padding: 10px;
-  font-family: "Fira Code", monospace;
-  font-size: 12px;
-  border-radius: 4px;
-}
-
-.modal__textarea {
-  min-height: 70px;
-  border-radius: 4px;
-  border: none;
-  padding: 8px;
-  font-family: inherit;
-  resize: vertical;
-}
-
-.modal__cta {
-  align-self: flex-end;
-  margin-top: 4px;
-  padding: 6px 16px;
-  border: none;
-  border-radius: 3px;
-  background: #ff007a;
-  color: #fff;
-  cursor: pointer;
-  font-size: 13px;
-}
-.modal__textarea {
-  min-height: 90px;
-  max-height: 200px;
-  border-radius: 6px;
-  border: 1px solid #444;
-  padding: 12px;
-  font-family: "Fira Code", "Courier New", monospace;
-  font-size: 14px;
-  line-height: 1.4;
-  background: #1a1a1a;
-  color: #fff;
-  resize: vertical;
-  outline: none;
-  transition: border-color 0.2s;
-}
-
-.modal__textarea:focus {
-  border-color: #00ff5f;
-  box-shadow: 0 0 0 2px rgba(0, 255, 95, 0.2);
-}
-.modal__content {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  font-size: 14px;
-  position: relative; /* для позиціонування кнопки */
-}
-
-.modal__cta {
-  align-self: flex-end;
-  padding: 6px 16px;
-  border: none;
-  border-radius: 3px;
-  background: #ff007a;
-  color: #fff;
-  cursor: pointer;
-  font-size: 13px;
-  margin-top: auto; /* штовхає униз */
 }
 
 .modal__panel {
@@ -156,50 +30,82 @@
 }
 
 .modal__content {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 12px;
   font-size: 14px;
-  position: relative; /* для кнопки закриття */
 }
 
 .modal__close {
   position: absolute;
-  top: -10px;
-  right: 12px; /* ✅ ВЕРХНІЙ ПРАВИЙ КУТ */
+  top: 12px;
+  right: 12px;
   background: rgba(255, 255, 255, 0.2);
   border: none;
-  border-radius: 10%;
-  width: 56px;
+  border-radius: 50%;
+  width: 36px;
   height: 36px;
   padding: 0;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.2s;
+  color: #fff;
+  font-size: 18px;
   z-index: 10;
+  transition: all 0.2s;
 }
 
 .modal__close:hover {
   background: rgba(255, 255, 255, 0.4);
-  transform: scale(1.1);
 }
 
 .modal__title {
   font-size: 18px;
   margin: 0;
 }
+
 .modal__subtitle {
   font-size: 13px;
   margin: 0;
 }
+
+.modal__code-example {
+  background: #000;
+  color: #00ff5f;
+  padding: 12px;
+  font-family: "Fira Code", monospace;
+  font-size: 13px;
+  border-radius: 6px;
+  min-height: 50px;
+  white-space: pre-wrap;
+}
+
+.modal__textarea {
+  min-height: 90px;
+  max-height: 200px;
+  border-radius: 6px;
+  border: 1px solid #444;
+  padding: 12px;
+  font-family: "Fira Code", monospace;
+  font-size: 14px;
+  background: #1a1a1a;
+  color: #fff;
+  resize: vertical;
+}
+
+.modal__textarea:focus {
+  border-color: #00ff5f;
+  box-shadow: 0 0 0 2px rgba(0, 255, 95, 0.2);
+}
+
 .modal__cta {
   align-self: flex-end;
   padding: 8px 20px;
-  background: #ff007a;
   border: none;
   border-radius: 6px;
+  background: #ff007a;
   color: #fff;
   font-size: 14px;
   cursor: pointer;

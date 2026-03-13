@@ -4,47 +4,30 @@ export const initModal = () => {
     closeOverlay: document.getElementById("closeModal"),
     closeBtn: document.getElementById("closeModalBtn"),
     modal: document.getElementById("modal"),
-    textarea: document.querySelector(".modal__textarea"),
+    textarea: document.getElementById("codeInput"),
+    preview: document.getElementById("codePreview"),
     runBtn: document.querySelector(".modal__cta"),
-    codeEx: document.querySelector(".modal__code-example"),
   };
 
   const toggleModal = () => {
     refs.modal.classList.toggle("modal--open");
+
     if (refs.modal.classList.contains("modal--open")) {
-      refs.textarea?.focus();
+      refs.textarea.focus();
     }
   };
 
+  const updatePreview = () => {
+    const code = refs.textarea.value || "<h1>Hello world!</h1>";
+
+    const temp = document.createElement("div");
+    temp.innerHTML = code;
+
+    refs.preview.textContent = temp.textContent;
+  };
+
   const runCode = () => {
-    let code = refs.textarea.value.trim();
-
-    if (!code.includes("<")) {
-      const lines = code.split("\n");
-      let htmlLines = "";
-
-      lines.forEach((line) => {
-        const trimmed = line.trim();
-        if (trimmed) {
-          htmlLines += `<h1>${trimmed}</h1>\n`;
-        } else {
-          htmlLines += "\n";
-        }
-      });
-      code = htmlLines.trim();
-    }
-
-    const escapedHtml = code
-      .replace(/&/g, "&amp;")
-      .replace(/</g, "&lt;")
-      .replace(/>/g, "&gt;");
-
-    refs.codeEx.innerHTML = escapedHtml;
-
-    refs.textarea.style.background = "#00ff5f20";
-    setTimeout(() => {
-      refs.textarea.style.background = "#1a1a1a";
-    }, 300);
+    updatePreview();
   };
 
   refs.openBtn?.addEventListener("click", toggleModal);
@@ -52,19 +35,12 @@ export const initModal = () => {
   refs.closeBtn?.addEventListener("click", toggleModal);
   refs.runBtn?.addEventListener("click", runCode);
 
-  refs.textarea?.addEventListener("input", (e) => {
-    e.target.style.height = "auto";
-    e.target.style.height = e.target.scrollHeight + "px";
-  });
-
-  refs.textarea?.addEventListener("keydown", (e) => {
-    if (e.key === "Enter" && e.ctrlKey) {
-      e.preventDefault();
-      runCode();
-    }
-  });
+  refs.textarea?.addEventListener("input", updatePreview);
 
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") toggleModal();
   });
+
+  refs.textarea.value = "<h1>Hello world!</h1>";
+  updatePreview();
 };
